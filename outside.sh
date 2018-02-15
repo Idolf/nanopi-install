@@ -118,7 +118,9 @@ UUID=$UUID / ext4 discard,noatime,errors=remount-ro 0 1
 UUID=$BOOT_UUID /boot ext4 discard,noatime 0 2
 EOF
 
-cp -r inside.sh linux-image-*.deb /target
+cp -r linux-image-*.deb /target
+
+cp -r inside.sh /target
 
 mkdir -p /target/home/idolf-ssh
 cat /home/idolf/.ssh/keys/nanopi.pub > /target/home/idolf-ssh/authorized_keys
